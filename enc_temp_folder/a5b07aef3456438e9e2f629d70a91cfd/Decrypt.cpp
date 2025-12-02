@@ -124,7 +124,7 @@ int main()
             std::string key_str = sha256(pre_seed);
             //std::cout << "wartoœci wiersza: \n" << pre_seed << "\n" << "wartoœci hasza: " << key_str << "\n";
             std::vector<unsigned char> key = hex_to_bytes(key_str);
-            decrypt_me = hex_to_string(bytes_to_hex(aes_decrypt(decrypt, key, iv)));
+            decrypt_me = bytes_to_hex(aes_decrypt(decrypt, key, iv));
             //std::cout << "szyfrogram: ";
             pre_seed = "";
         }
